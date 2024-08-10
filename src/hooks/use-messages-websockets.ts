@@ -21,7 +21,7 @@ type WebHookMessage =
 
 export function useMessagesWebsockets({id}: UseMessagesWebsocketsParams) {
     useEffect(() => {
-        const ws = new WebSocket(`ws://localhost:8080/subscribe/${id}`);
+        const ws = new WebSocket(`wss://go-react-ama.onrender.com/subscribe/${id}`);
 
         ws.onopen = () => {
             console.log("Conectado");

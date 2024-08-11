@@ -16,7 +16,7 @@ export const CreateMessageForm = () => {
     async function createMessageFunction(event: { preventDefault: () => void; }) {
         event.preventDefault();
 
-        if (!message) {
+        if (!message && message.trim() === "") {
             toast.error("A Mensagem não pode estar vazia.");
             return;
         }
@@ -42,8 +42,9 @@ export const CreateMessageForm = () => {
                 name="message"
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
-                placeholder="Qual a sua pergunta?"
+                placeholder="Qual o seu pensamento?"
                 autoComplete="off"
+                maxLength={255}
                 className="flex-1 text-sm bg-transparent mx-2 outline-none text-zinc-100 placeholder:text-zinc-500"
             />
 
@@ -51,7 +52,7 @@ export const CreateMessageForm = () => {
                 type="submit"
                 className="bg-orange-400 text-orange-950 px-3 py-1.5 gap-1.5 flex items-center rounded-lg font-medium text-sm hover:bg-orange-500 transition-colors"
             >
-                Criar pergunta
+                Publicar
                 <ArrowRight className="size-4" />
             </button>
         </form>

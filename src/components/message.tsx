@@ -47,7 +47,7 @@ export function Message({text, id: messageId, amountOfReactions, answered = fals
                     className="mt-3 flex items-center gap-2 text-orange-400 text-sm font-medium hover:text-orange-500"
                 >
                     <ArrowUp className="size-4" />
-                    Curtir pergunta ({amountOfReactions})
+                    Curtir pensamento ({amountOfReactions})
                 </button>
             ) : (
                 <button
@@ -56,7 +56,7 @@ export function Message({text, id: messageId, amountOfReactions, answered = fals
                     className="mt-3 flex items-center gap-2 text-zinc-400 text-sm font-medium hover:text-zinc-500"
                 >
                     <ArrowUp className="size-4" />
-                    Curtir pergunta ({amountOfReactions})
+                    Curtir pensamento ({amountOfReactions})
                 </button>
             )}
         </li>
